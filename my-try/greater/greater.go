@@ -1,5 +1,7 @@
 package greater
 
-func IsGreater[T /* Your constraint goes here! */](x, y T) bool {
+// func (m MyInt) Greater(v MyInt) bool {
+
+func IsGreater[T interface {Greater(T) bool}](x, y T) bool {
 	return x.Greater(y)
 }
